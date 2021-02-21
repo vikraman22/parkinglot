@@ -1,5 +1,6 @@
 <?php
 
+echo "vikram";
 global $connection;
 $connection = mysqli_connect('localhost', 'root', '', 'parking');
 
