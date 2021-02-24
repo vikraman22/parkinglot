@@ -1,5 +1,6 @@
 <?php
 require_once 'connect.php';
+require_once 'user_func.php';
 
 signup();
 
@@ -62,7 +63,7 @@ signup();
                 <div class="col">
                     <center>
                         <small class="text-muted">Phone Number</small>
-                        <input type="number" class="form-control btn-outline-primary border forms" name="phno" id="phno" placeholder="Phone Number"><br><br>
+                        <input type="text" class="form-control btn-outline-primary border forms" name="phno" id="phno" placeholder="Phone Number"><br><br>
                         <small class="text-muted">Confirm Password</small>
                         <input type="password" class="form-control btn-outline-primary border forms" name="u_pswd" id="confpswd" placeholder="Confirm Password">
                     </center>
