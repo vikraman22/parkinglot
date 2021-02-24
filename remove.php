@@ -42,11 +42,18 @@ remove_car();
                 </div><br><br>
                 <form name="details">
                     <small class="text-muted">Vehicle Number</small>
+
                     <input type="text" class ="form-control btn-outline-success border forms" name="v_num" id="vhno" placeholder="Vehicle Number"><br>
+                    <!-- <small class="text-muted">Phone Number</small>
+
+                    <input type="text" class ="form-control btn-outline-success border forms" name="phone_no" id="phone_no" placeholder="phone Number"><br>
+                     -->
                     <p class="text-success h3">Date of parking: <p class="text-success h3" name="park_date"></p> </p>
                     <p class="text-success h3">Total Cost: <p class="text-success h3" name="cost"></p> </p>
                 </form>
                 <center>
+                    <button class="btn btn-outline-success" id="btns" name="details" >DETAILS</button><br><br>
+    
                     <button class="btn btn-outline-success" id="btns" name="remove" >REMOVE</button><br><br>
                     <a id="btns" class="btn btn-outline-success" href="admin.php">HOME</a>
                 </center>

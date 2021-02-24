@@ -1,6 +1,8 @@
 <?php
 require_once 'connect.php';
+require_once 'admin_func.php';
 
+cost_calc();
 
 
 ?>
@@ -30,7 +32,7 @@ require_once 'connect.php';
 
     <body id="main">
         <br>  
-        <form action="">
+        <form action="search.php" method="post">
             <div class="container">
                 <div class="jumbotron bg-success text-dark shadow">
                     <br>
@@ -41,7 +43,7 @@ require_once 'connect.php';
                 <form name="details">
                     <small class="text-muted">Vehicle Number</small>
                     <input type="text" class ="form-control btn-outline-success border forms" name="v_name" id="vhno" placeholder="Vehicle Number"><br>
-                    <button class="btn btn-outline-success" id="btns" >SEARCH</button><br><br>
+                    <button class="btn btn-outline-success" id="btns" name='search' >SEARCH</button><br><br>
                     <p class="text-success h3">Date of parking: <p class="text-success h3" name="park_date"></p> </p>
                     <p class="text-success h3">Total Cost: <p class="text-success h3" name="cost"></p> </p>
                 </form>

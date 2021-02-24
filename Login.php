@@ -52,7 +52,7 @@ login();
             </div><br><br>
             <center>
             <small class="text-muted">Phone Number</small>
-                <input type="number" class ="form-control btn-outline-primary border forms" name="phno" id="phno" placeholder="Phone Number"><br><br>
+                <input type="text" class ="form-control btn-outline-primary border forms" name="phno" id="phno" placeholder="Phone Number"><br><br>
                 <small class="text-muted">Password</small>
                 <input type="password" class ="form-control btn-outline-primary border forms" name="pswd" id="pswd" placeholder="Password"><br><br>
                 <button class="btn btn-outline-primary" id="btns" name="login">LOGIN</button><br><br>

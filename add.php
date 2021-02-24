@@ -16,7 +16,7 @@ add_car();
         <title>Parking Lot</title>
         <style>
             #main{
-                /* background-image: url("Images/matte_black.jpg");*/
+                 background-image: url("Images/matte_black.jpg");
                 font-family: 'Josefin Sans', sans-serif; 
                 background-size: 100% 100%;
             }
