@@ -76,7 +76,7 @@ require_once 'user_func.php';
     <body id="main">
         <br>  
         <div class="container">
-        <form action="Login.php" method="post" >
+        <form action="Login_admin.php" method="post" >
             <div class="jumbotron bg-primary text-dark shadow">
                 <br>
                 <center>
