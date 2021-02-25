@@ -1,9 +1,20 @@
-<?php
-require_once 'connect.php';
+ <?php session_start(); 
+ error_reporting(0);
+ ?>
+ 
 
+
+ <?php
+require_once 'connect.php';
+require_once 'Login.php';
 
 
 ?>
+
+
+
+
+
 <!doctype html>
 <html lang="en">
     
@@ -15,7 +26,7 @@ require_once 'connect.php';
         <title>Parking Lot</title>
         <style>
             #main{
-                background-image: url("Images/matte_black.jpg");
+                background-image: url("Images/john-matychuk-393455.jpg") repeat= "no repeat";
                 font-family: 'Josefin Sans', sans-serif;
                 background-size: 100% 100%;
             }
@@ -35,7 +46,18 @@ require_once 'connect.php';
                     <p class="lead">Add, Remove or Search for a vehicle.</p>
                 </center>  
             </div><br><br>
+
             <center>
+               <h1>
+               <?php 
+               
+               echo $_SESSION['name'];
+                
+                ?> 
+            
+               </h1>
+
+
                 <a id="btns" class="btn btn-outline-success btn-lg" href="add.php">ADD VEHICLE</a><br><br>
                 <a id="btns" class="btn btn-outline-success btn-lg" href="remove.php">REMOVE VEHICLE</a><br><br>
                 <a id="btns" class="btn btn-outline-success btn-lg" href="search.php">SEARCH VEHICLE</a><br><br><br>

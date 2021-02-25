@@ -1,11 +1,63 @@
 
-
+<?php session_start();
+//error_reporting(0);
+?>
 
 <?php
+
 require_once 'connect.php';
 require_once 'user_func.php';
 
-login();
+
+    
+       $connection = mysqli_connect('localhost', 'root', '', 'parking');
+
+        if(isset($_POST['login'])) {
+        $phone_no = $_POST['phno'];
+        $validity_check = $_POST['pswd'];
+
+        // && u_password='$validity_check'
+
+        $query = " SELECT * from users where phone_no='$phone_no' ";
+        $result =  mysqli_query($connection, $query);
+        $row =  mysqli_fetch_array($result);
+        
+          $db_username = $row['u_name'];
+          $db_userpasswd = $row['u_password'];
+          $db_phone = $row['phone_no'];
+
+          if($phone_no !== $db_phone && $validity_check !== $db_userpasswd)
+          {              
+                  header("location:Login.php"); 
+          }
+  
+          else if($phone_no == $db_phone && $validity_check == $db_userpasswd)
+          {
+              $_SESSION['name'] = $db_username;
+              $_SESSION['no']=$db_phone;
+              $_SESSION['pass'] = $db_userpasswd;
+              echo $_SESSION['no'];
+              header("location:admin.php");
+          }        
+
+        //   if($phone_no !== $db_phone && $validity_check !== $db_userpasswd)
+        // {
+        //     echo '<script>alert("Invalid phoneNo or pass")</script>'; 
+        //      header("Location:Login.php");
+             
+        // }
+
+        // else if($phone_no == $db_phone && $validity_check == $db_userpasswd)
+        // {
+        //     $_SESSION['no'] = $db_phone;
+        //     $_SESSION['name'] = $db_username;
+        //     echo $_SESSION['no'];
+               
+        //   // header("Location:admin.php");    
+        // }      
+        
+        
+}
 
 ?>
 

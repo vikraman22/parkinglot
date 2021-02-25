@@ -1,21 +1,9 @@
+
+
+
+
 <?php
 
-function login()
-{
-    $connection = mysqli_connect('localhost', 'root', '', 'parking');
-
-    if (isset($_POST['login'])) {
-        $phone_no = $_POST['phno'];
-        $validity_check = $_POST['pswd'];
-
-
-        $query = " SELECT * from users where phone_no='$phone_no' && u_password='$validity_check'";
-        $result =  mysqli_query($connection, $query);
-
-        while ($row =  mysqli_fetch_assoc($result))
-            print_r($row);
-    }
-}
 
 function signup()
 {
@@ -35,7 +23,7 @@ function signup()
         else
            {
                echo '<script>alert("User account created")</script>'; 
-               //header('login.php');
+               header('Location:login.php');
            }
         
       
