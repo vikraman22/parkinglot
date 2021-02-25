@@ -28,6 +28,7 @@ require_once 'user_func.php';
 
           if($phone_no !== $db_phone && $validity_check !== $db_userpasswd)
           {              
+                  
                   header("location:Login.php"); 
           }
   
@@ -36,26 +37,8 @@ require_once 'user_func.php';
               $_SESSION['name'] = $db_username;
               $_SESSION['no']=$db_phone;
               $_SESSION['pass'] = $db_userpasswd;
-              echo $_SESSION['no'];
-              header("location:book.php");
-          }        
-
-        //   if($phone_no !== $db_phone && $validity_check !== $db_userpasswd)
-        // {
-        //     echo '<script>alert("Invalid phoneNo or pass")</script>'; 
-        //      header("Location:Login.php");
-             
-        // }
-
-        // else if($phone_no == $db_phone && $validity_check == $db_userpasswd)
-        // {
-        //     $_SESSION['no'] = $db_phone;
-        //     $_SESSION['name'] = $db_username;
-        //     echo $_SESSION['no'];
-               
-        //   // header("Location:admin.php");    
-        // }      
-        
+              header("location:admin.php");
+          }                
         
 }
 
@@ -97,7 +80,7 @@ require_once 'user_func.php';
             <div class="jumbotron bg-primary text-dark shadow">
                 <br>
                 <center>
-                    <h1 class="display-1">LOGIN</h1>                             
+                    <h1 class="display-1">ADMIN LOGIN</h1>                             
                     <hr>
                     <p class="lead">Login to your account or <a href="signup.php" class="text-dark" href="signup.php"> SIGNUP </a></p>
                 </center>
