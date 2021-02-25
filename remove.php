@@ -1,10 +1,12 @@
 
-<?php ;
+<?php 
 
 require_once 'connect.php';
 
     $connection = mysqli_connect('localhost', 'root', '', 'parking');
-
+    
+    $park_date;
+    $park_cost;
 
     if (isset($_POST['details'])) 
     {
@@ -27,7 +29,8 @@ require_once 'connect.php';
         if (is_null($parking_date))
             echo '<script>alert("No vehicles found")</script>';
 
-        else {
+        else 
+        {
             $park_cost = ($cost[0] + 1) * 30;
             $park_date = $parking_date[0];
         }
